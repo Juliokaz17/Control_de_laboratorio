@@ -1,0 +1,1517 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Tienda</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+            <div class="container">
+                <a href="#page-top">
+                    <span class="glyphicon glyphicon-home"></span>
+                  </a>
+                <a class="navbar-brand" href="index.html"><img src="assets/img/navbar-logo.png" alt="..." /></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars ms-1"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="iniciar_sesion.html">Iniciar sesión</a></li>
+                        <li class="nav-item"><a class="nav-link" href="usuarios.PHP">Información de usuarios</a></li>
+                        <li class="nav-item"><a class="nav-link" href="carrito.PHP">Carrito</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Masthead-->
+        <header class="masthead">
+            <div class="container">
+                <div class="masthead-heading text-uppercase">Productos para el hogar</div>
+                <div class="masthead-subheading">¿Ya tienes una cuenta?</div>
+                <a class="btn btn-primary btn-xl text-uppercase" href="crear_cuenta.html">Crear cuenta</a>
+            </div>
+        </header>
+        
+        <!-- Portfolio Grid-->
+        <section class="page-section bg-light" id="portfolio">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">Productos</h2>
+                    <h3 class="section-subheading text-muted">Elige tus productos.</h3>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-sm-6 mb-4">
+                        <!-- Portfolio item 1-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="assets/img/portfolio/1.jpg" alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Refrigerador</div>
+                                <div class="portfolio-caption-subheading text-muted">Samsung</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4">
+                        <!-- Portfolio item 2-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal2">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="assets/img/portfolio/2.jpg" alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Sofá cama</div>
+                                <div class="portfolio-caption-subheading text-muted">Nuova</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4">
+                        <!-- Portfolio item 3-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal3">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="assets/img/portfolio/3.jpg" alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Smart TV</div>
+                                <div class="portfolio-caption-subheading text-muted">Samsung</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
+                        <!-- Portfolio item 4-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal4">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="assets/img/portfolio/4.jpg" alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Horno de microondas</div>
+                                <div class="portfolio-caption-subheading text-muted">Mabe</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4 col-sm-6 mb-4 mb-sm-0">
+                        <!-- Portfolio item 5-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal5">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="assets/img/portfolio/5.jpg" alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Bote de basura</div>
+                                <div class="portfolio-caption-subheading text-muted">Bath Accents</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4">
+                        <!-- Portfolio item 6-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal6">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="assets/img/portfolio/6.jpg" alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Mesa de vidrio</div>
+                                <div class="portfolio-caption-subheading text-muted">Lottus</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4 col-sm-6 mb-4">
+                        <!-- Portfolio item 7-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal7">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="assets/img/portfolio/7.jpg" alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Silla ejecutiva</div>
+                                <div class="portfolio-caption-subheading text-muted">Andalucía</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <!-- Portfolio item 8-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal8">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="assets/img/portfolio/8.jpg" alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Ventilador de torre</div>
+                                <div class="portfolio-caption-subheading text-muted">Honeywell</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <!-- Portfolio item 9-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal9">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="assets/img/portfolio/9.jpg" alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Buró</div>
+                                <div class="portfolio-caption-subheading text-muted">Knarrevik</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4">
+                        <!-- Portfolio item 10-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal10">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="assets/img/portfolio/10.jpg" alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Impresora</div>
+                                <div class="portfolio-caption-subheading text-muted">Canon</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4">
+                        <!-- Portfolio item 11-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal11">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="assets/img/portfolio/11.jpg" alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Espejo</div>
+                                <div class="portfolio-caption-subheading text-muted">Nissedal</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <!-- Portfolio item 12-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal12">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="assets/img/portfolio/12.jpg" alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Vajilla</div>
+                                <div class="portfolio-caption-subheading text-muted">Gibson Soho Lounge</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4">
+                        <!-- Portfolio item 13-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal13">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="assets/img/portfolio/13.jpg" alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Escoba</div>
+                                <div class="portfolio-caption-subheading text-muted">Scotch-brite</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <!-- Portfolio item 14-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal14">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="assets/img/portfolio/14.jpg" alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Almohadas</div>
+                                <div class="portfolio-caption-subheading text-muted">Essence</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <!-- Portfolio item 15-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal15">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="assets/img/portfolio/15.jpg" alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Cabecera</div>
+                                <div class="portfolio-caption-subheading text-muted">Bertolini</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4">
+                        <!-- Portfolio item 16-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal16">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="assets/img/portfolio/16.jpg" alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Estufa</div>
+                                <div class="portfolio-caption-subheading text-muted">Koblenz</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <!-- Portfolio item 17-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal17">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="assets/img/portfolio/17.jpg" alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Cubiertos</div>
+                                <div class="portfolio-caption-subheading text-muted">Procook</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <!-- Portfolio item 18-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal18">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="assets/img/portfolio/18.jpg" alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Cobija</div>
+                                <div class="portfolio-caption-subheading text-muted">Nativa5</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4">
+                        <!-- Portfolio item 19-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal19">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="assets/img/portfolio/19.jpg" alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Closet</div>
+                                <div class="portfolio-caption-subheading text-muted">Kingshouse</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <!-- Portfolio item 20-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal20">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="assets/img/portfolio/20.jpg" alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Contacto</div>
+                                <div class="portfolio-caption-subheading text-muted">Dúplex</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <!-- Portfolio item 21-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal21">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="assets/img/portfolio/21.jpg" alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Ganchos</div>
+                                <div class="portfolio-caption-subheading text-muted">CirculoBarush</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <!-- Portfolio item 22-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal22">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="assets/img/portfolio/22.jpg" alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Escritorio</div>
+                                <div class="portfolio-caption-subheading text-muted">Moblum</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <!-- Portfolio item 23-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal23">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="assets/img/portfolio/23.jpg" alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Cajonera</div>
+                                <div class="portfolio-caption-subheading text-muted">HELMER</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4">
+                        <!-- Portfolio item 24-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal24">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="assets/img/portfolio/24.jpg" alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Tapete</div>
+                                <div class="portfolio-caption-subheading text-muted">Haus</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <!-- Portfolio item 25-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal25">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="assets/img/portfolio/25.jpg" alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Cancel</div>
+                                <div class="portfolio-caption-subheading text-muted">Canceles AGA</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <!-- Portfolio item 26-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal26">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="assets/img/portfolio/26.jpg" alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Toalla</div>
+                                <div class="portfolio-caption-subheading text-muted">DIMFORSEN</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4">
+                        <!-- Portfolio item 27-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal27">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="assets/img/portfolio/27.jpg" alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Cortina</div>
+                                <div class="portfolio-caption-subheading text-muted">Hauman Brand</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <!-- Portfolio item 28-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal28">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="assets/img/portfolio/28.jpg" alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Lavadora</div>
+                                <div class="portfolio-caption-subheading text-muted">LG</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <!-- Portfolio item 29-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal29">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="assets/img/portfolio/29.jpg" alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Colchón</div>
+                                <div class="portfolio-caption-subheading text-muted">Luuna One</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <!-- Portfolio item 30-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal30">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="assets/img/portfolio/30.jpg" alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Plancha</div>
+                                <div class="portfolio-caption-subheading text-muted">Oster</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+       
+        <!-- Footer-->
+        
+        <!-- Portfolio Modals-->
+        <!-- Portfolio item 1 modal popup-->
+        <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <form role="form" action="agregar_carrito1.PHP" method="post">
+                                        <h2 class="text-uppercase" >Refrigerador</h2>
+                                        <p class="item-intro text-muted">Samsung</p>
+                                        <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/1.jpg" alt="..." />
+                                        <p>Refrigerador elegante con despachador de agua bastante práctico. </p>
+                                        <ul class="list-inline">
+                                            <li>
+                                                <strong>Precio:</strong>
+                                                $23,999.00
+                                            </li>
+                                        </ul>
+                                        <button class="btn btn-primary btn-xl text-uppercase" type="submit">
+                                            Agregar al carrito
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio item 2 modal popup-->
+        <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <form role="form" action="agregar_carrito2.PHP" method="post">
+                                    <h2 class="text-uppercase">Sofá cama</h2>
+                                    <p class="item-intro text-muted">Nuova</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/2.jpg" alt="..." />
+                                    <p>Sofá cama bastante versatil marca Nuova. Es una excelente opción para ver televisión o simplemente relajarse.</p>
+                                    <ul class="list-inline">
+                                        <li>
+                                            <strong>Precio:</strong>
+                                            $7,999.00
+                                        </li>
+                                    </ul>
+                                    <button class="btn btn-primary btn-xl text-uppercase" type="submit">
+                                        Agregar al carrito
+                                    </button>
+                                </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio item 3 modal popup-->
+        <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <form role="form" action="agregar_carrito3.PHP" method="post">
+                                    <h2 class="text-uppercase">Smart TV</h2>
+                                    <p class="item-intro text-muted">Samsung</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/3.jpg" alt="..." />
+                                    <p>Smart TV de samsung con la posibilidad de acceder a internet, distintas aplicaciones y hasta redes sociales.</p>
+                                    <ul class="list-inline">
+                                 
+                                        <li>
+                                            <strong>Precio:</strong>
+                                            $8,795.00
+                                        </li>
+                                    </ul>
+                                    <button class="btn btn-primary btn-xl text-uppercase" type="submit">
+                                        Agregar al carrito
+                                    </button>
+                                </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio item 4 modal popup-->
+        <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <form role="form" action="agregar_carrito4.PHP" method="post">
+                                    <h2 class="text-uppercase">Horno de microondas</h2>
+                                    <p class="item-intro text-muted">Mabe</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/4.jpg" alt="..." />
+                                    <p>Horno de microondas color silver con un diseño bastante moderno y práctico.</p>
+                                    <ul class="list-inline">
+                                      
+                                        <li>
+                                            <strong>Precio:</strong>
+                                            $1,995.00
+                                        </li>
+                                    </ul>
+                                    <button class="btn btn-primary btn-xl text-uppercase" type="submit">
+                                        Agregar al carrito
+                                    </button>
+                                </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio item 5 modal popup-->
+        <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <form role="form" action="agregar_carrito5.PHP" method="post">
+                                    <h2 class="text-uppercase">Bote de basura</h2>
+                                    <p class="item-intro text-muted">Bath Accents</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/5.jpg" alt="..." />
+                                    <p>Bote de basura con pedal, capacidad de 5 L y un contenedor removible.</p>
+                                    <ul class="list-inline">
+                                    
+                                        <li>
+                                            <strong>Precio:</strong>
+                                            $297.00
+                                        </li>
+                                    </ul>
+                                     <button class="btn btn-primary btn-xl text-uppercase" type="submit">
+                                        Agregar al carrito
+                                    </button>
+                                </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio item 6 modal popup-->
+        <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <form role="form" action="agregar_carrito6.PHP" method="post">
+                                    <h2 class="text-uppercase">Mesa de vidrio</h2>
+                                    <p class="item-intro text-muted">Lottus</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/6.jpg" alt="..." />
+                                    <p>Práctica mesa Lottus de comedor rectangular con patas color cromo.</p>
+                                    <ul class="list-inline">
+                                   
+                                        <li>
+                                            <strong>Precio:</strong>
+                                            $1,499.00
+                                        </li>
+                                    </ul>
+                                     <button class="btn btn-primary btn-xl text-uppercase" type="submit">
+                                        Agregar al carrito
+                                    </button>
+                                </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio item 7 modal popup-->
+        <div class="portfolio-modal modal fade" id="portfolioModal7" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <form role="form" action="agregar_carrito7.PHP" method="post"> 
+                                    <h2 class="text-uppercase">Silla ejecutiva</h2>
+                                    <p class="item-intro text-muted">Andalucía</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/7.jpg" alt="..." />
+                                    <p>Silla ejecutiva con respaldo alto bastante comodo y soporte de lumbar.</p>
+                                    <ul class="list-inline">
+                                        <li>
+                                            <strong>Precio:</strong>
+                                            $1,994.05
+                                        </li>
+            
+                                    </ul>
+                                     <button class="btn btn-primary btn-xl text-uppercase" type="submit">
+                                        Agregar al carrito
+                                    </button>
+                                </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio item 8 modal popup-->
+        <div class="portfolio-modal modal fade" id="portfolioModal8" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <form role="form" action="agregar_carrito8.PHP" method="post"> 
+                                    <h2 class="text-uppercase">Ventilador de torre</h2>
+                                    <p class="item-intro text-muted">Honeywell</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/8.jpg" alt="..." />
+                                    <p>Ventilador de torre potente color negro con un diseño ágil y versátil.</p>
+                                    <ul class="list-inline">
+                                     
+                                        <li>
+                                            <strong>Precio:</strong>
+                                            $2,629.00
+                                        </li>
+                                    </ul>
+                                     <button class="btn btn-primary btn-xl text-uppercase" type="submit">
+                                        Agregar al carrito
+                                    </button>
+                                </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio item 9 modal popup-->
+        <div class="portfolio-modal modal fade" id="portfolioModal9" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <form role="form" action="agregar_carrito9.PHP" method="post"> 
+                                    <h2 class="text-uppercase">Buró</h2>
+                                    <p class="item-intro text-muted">Knarrevik</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/9.jpg" alt="..." />
+                                    <p>Buró negro bastente barato, pequeño y sencillo.</p>
+                                    <ul class="list-inline">
+                                        
+                                        <li>
+                                            <strong>Precio:</strong>
+                                            $299.00
+                                        </li>
+                                    </ul>
+                                     <button class="btn btn-primary btn-xl text-uppercase" type="submit">
+                                        Agregar al carrito
+                                    </button>
+                                </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio item 10 modal popup-->
+        <div class="portfolio-modal modal fade" id="portfolioModal10" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <form role="form" action="agregar_carrito10.PHP" method="post"> 
+                                    <h2 class="text-uppercase">Impresora</h2>
+                                    <p class="item-intro text-muted">Canon</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/10.jpg" alt="..." />
+                                    <p>Impresora de inyección de tinta con acceso frontal y visibilidad de los tanques de tinta.</p>
+                                    <ul class="list-inline">
+                                        
+                                        <li>
+                                            <strong>Precio:</strong>
+                                            $3,199.00
+                                        </li>
+                                    </ul>
+                                     <button class="btn btn-primary btn-xl text-uppercase" type="submit">
+                                        Agregar al carrito
+                                    </button>
+                                </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio item 11 modal popup-->
+        <div class="portfolio-modal modal fade" id="portfolioModal11" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <form role="form" action="agregar_carrito11.PHP" method="post"> 
+                                    <h2 class="text-uppercase">Espejo</h2>
+                                    <p class="item-intro text-muted">Nissedal</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/11.jpg" alt="..." />
+                                    <p>Espejo con diseño sencillo con posibilidad de ser colgado verticalmente u horizontalmente.</p>
+                                    <ul class="list-inline">
+                                        
+                                        <li>
+                                            <strong>Precio:</strong>
+                                            $1,499.00
+                                        </li>
+                                    </ul>
+                                     <button class="btn btn-primary btn-xl text-uppercase" type="submit">
+                                        Agregar al carrito
+                                    </button>
+                                </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio item 12 modal popup-->
+        <div class="portfolio-modal modal fade" id="portfolioModal12" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <form role="form" action="agregar_carrito12.PHP" method="post"> 
+                                    <h2 class="text-uppercase">Vajilla</h2>
+                                    <p class="item-intro text-muted">Gibson Soho Lounge</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/12.jpg" alt="..." />
+                                    <p>Vajilla de 16 piezas con platos y vasos de loza esmaltada. </p>
+                                    <ul class="list-inline">
+                                        
+                                        <li>
+                                            <strong>Precio:</strong>
+                                            $2,499.00
+                                        </li>
+                                    </ul>
+                                     <button class="btn btn-primary btn-xl text-uppercase" type="submit">
+                                        Agregar al carrito
+                                    </button>
+                                </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio item 13 modal popup-->
+        <div class="portfolio-modal modal fade" id="portfolioModal13" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <form role="form" action="agregar_carrito13.PHP" method="post"> 
+                                    <h2 class="text-uppercase">Escoba</h2>
+                                    <p class="item-intro text-muted">Scotch-brite</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/13.jpg" alt="..." />
+                                    <p>Escoba para interiores diseñada para no dañar tus muebles con protectores de goma.</p>
+                                    <ul class="list-inline">
+                                        
+                                        <li>
+                                            <strong>Precio:</strong>
+                                            $119.00
+                                        </li>
+                                    </ul>
+                                     <button class="btn btn-primary btn-xl text-uppercase" type="submit">
+                                        Agregar al carrito
+                                    </button>
+                                </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio item 14 modal popup-->
+        <div class="portfolio-modal modal fade" id="portfolioModal14" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <form role="form" action="agregar_carrito14.PHP" method="post"> 
+                                    <h2 class="text-uppercase">Almohadas</h2>
+                                    <p class="item-intro text-muted">Essence</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/14.jpg" alt="..." />
+                                    <p>Paquete con dos almohadas matrimoniales bastante comodas con protector de regalo.</p>
+                                    <ul class="list-inline">
+                                        
+                                        <li>
+                                            <strong>Precio:</strong>
+                                            $505.00
+                                        </li>
+                                    </ul>
+                                     <button class="btn btn-primary btn-xl text-uppercase" type="submit">
+                                        Agregar al carrito
+                                    </button>
+                                </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio item 15 modal popup-->
+        <div class="portfolio-modal modal fade" id="portfolioModal15" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <form role="form" action="agregar_carrito15.PHP" method="post"> 
+                                    <h2 class="text-uppercase">Cabecera</h2>
+                                    <p class="item-intro text-muted">Bertolini</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/15.jpg" alt="..." />
+                                    <p>Cabecera color blanco con acabado UV brilloso con mayor durabilidad y fácil limpieza.</p>
+                                    <ul class="list-inline">
+                                        
+                                        <li>
+                                            <strong>Precio:</strong>
+                                            $2,390.00
+                                        </li>
+                                    </ul>
+                                     <button class="btn btn-primary btn-xl text-uppercase" type="submit">
+                                        Agregar al carrito
+                                    </button>
+                                </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio item 16 modal popup-->
+        <div class="portfolio-modal modal fade" id="portfolioModal16" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <form role="form" action="agregar_carrito16.PHP" method="post"> 
+                                    <h2 class="text-uppercase">Estufa</h2>
+                                    <p class="item-intro text-muted">Koblenz</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/16.jpg" alt="..." />
+                                    <p>Estufa de gas con encendido electrico, seis quemadores y parrillas de fundición.</p>
+                                    <ul class="list-inline">
+                                        
+                                        <li>
+                                            <strong>Precio:</strong>
+                                            $7,999.00
+                                        </li>
+                                    </ul>
+                                     <button class="btn btn-primary btn-xl text-uppercase" type="submit">
+                                        Agregar al carrito
+                                    </button>
+                                </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio item 17 modal popup-->
+        <div class="portfolio-modal modal fade" id="portfolioModal17" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <form role="form" action="agregar_carrito17.PHP" method="post"> 
+                                    <h2 class="text-uppercase">Cubiertos</h2>
+                                    <p class="item-intro text-muted">Procook</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/17.jpg" alt="..." />
+                                    <p>Juego de cubiertos con 16 piezas hechas de acero inoxidable.</p>
+                                    <ul class="list-inline">
+                                       
+                                        <li>
+                                            <strong>Precio:</strong>
+                                            $359.00
+                                        </li>
+                                    </ul>
+                                     <button class="btn btn-primary btn-xl text-uppercase" type="submit">
+                                        Agregar al carrito
+                                    </button>
+                                </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio item 18 modal popup-->
+        <div class="portfolio-modal modal fade" id="portfolioModal18" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <form role="form" action="agregar_carrito18.PHP" method="post"> 
+                                    <h2 class="text-uppercase">Cobija</h2>
+                                    <p class="item-intro text-muted">Nativa5</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/18.jpg" alt="..." />
+                                    <p>Cobija relajante con peso para reducir el estrés y dormir profundamente.</p>
+                                    <ul class="list-inline">
+                                        
+                                        <li>
+                                            <strong>Precio:</strong>
+                                            $2,400.00
+                                        </li>
+                                    </ul>
+                                     <button class="btn btn-primary btn-xl text-uppercase" type="submit">
+                                        Agregar al carrito
+                                    </button>
+                                </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio item 19 modal popup-->
+        <div class="portfolio-modal modal fade" id="portfolioModal19" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <form role="form" action="agregar_carrito19.PHP" method="post"> 
+                                    <h2 class="text-uppercase">Closet</h2>
+                                    <p class="item-intro text-muted">Kingshouse</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/19.jpg" alt="..." />
+                                    <p>Closet moderno con 4 puertas hecho de buen material.</p>
+                                    <ul class="list-inline">
+                                        
+                                        <li>
+                                            <strong>Precio:</strong>
+                                            $3,899.00
+                                        </li>
+                                    </ul>
+                                     <button class="btn btn-primary btn-xl text-uppercase" type="submit">
+                                        Agregar al carrito
+                                    </button>
+                                </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio item 20 modal popup-->
+        <div class="portfolio-modal modal fade" id="portfolioModal20" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <form role="form" action="agregar_carrito20.PHP" method="post"> 
+                                    <h2 class="text-uppercase">Contacto</h2>
+                                    <p class="item-intro text-muted">Dúplex</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/20.jpg" alt="..." />
+                                    <p>Contacto para instalaciones en casa que funciona con corrientes de 125 Volts y 60 Hertz.</p>
+                                    <ul class="list-inline">
+                                        
+                                        <li>
+                                            <strong>Precio:</strong>
+                                            $73.00
+                                        </li>
+                                    </ul>
+                                     <button class="btn btn-primary btn-xl text-uppercase" type="submit">
+                                        Agregar al carrito
+                                    </button>
+                                </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio item 21 modal popup-->
+        <div class="portfolio-modal modal fade" id="portfolioModal21" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <form role="form" action="agregar_carrito21.PHP" method="post"> 
+                                    <h2 class="text-uppercase">Ganchos</h2>
+                                    <p class="item-intro text-muted">CirculoBarush</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/21.jpg" alt="..." />
+                                    <p>Conjunto de diez ganchos metalicos de excelente calidad.</p>
+                                    <ul class="list-inline">
+                                       
+                                        <li>
+                                            <strong>Precio:</strong>
+                                            $387.00
+                                        </li>
+                                    </ul>
+                                     <button class="btn btn-primary btn-xl text-uppercase" type="submit">
+                                        Agregar al carrito
+                                    </button>
+                                </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio item 22 modal popup-->
+        <div class="portfolio-modal modal fade" id="portfolioModal22" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <form role="form" action="agregar_carrito22.PHP" method="post"> 
+                                    <h2 class="text-uppercase">Escritorio</h2>
+                                    <p class="item-intro text-muted">Moblum</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/22.jpg" alt="..." />
+                                    <p>Escritorio para trabajo de madera con un pequeño cajón.</p>
+                                    <ul class="list-inline">
+                                        
+                                        <li>
+                                            <strong>Precio:</strong>
+                                            $5,832.00
+                                        </li>
+                                    </ul>
+                                     <button class="btn btn-primary btn-xl text-uppercase" type="submit">
+                                        Agregar al carrito
+                                    </button>
+                                </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio item 23 modal popup-->
+        <div class="portfolio-modal modal fade" id="portfolioModal23" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <form role="form" action="agregar_carrito23.PHP" method="post"> 
+                                    <h2 class="text-uppercase">Cajonera</h2>
+                                    <p class="item-intro text-muted">HELMER</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/23.jpg" alt="..." />
+                                    <p>Cajonera negra con ruedas de gran flexibilidad y orden.</p>
+                                    <ul class="list-inline">
+                                        
+                                        <li>
+                                            <strong>Precio:</strong>
+                                            $1,299.00
+                                        </li>
+                                    </ul>
+                                     <button class="btn btn-primary btn-xl text-uppercase" type="submit">
+                                        Agregar al carrito
+                                    </button>
+                                </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio item 24 modal popup-->
+        <div class="portfolio-modal modal fade" id="portfolioModal24" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <form role="form" action="agregar_carrito24.PHP" method="post"> 
+                                    <h2 class="text-uppercase">Tapete</h2>
+                                    <p class="item-intro text-muted">Haus</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/24.jpg" alt="..." />
+                                    <p>Tapete decorativo de uso interior y exterior con diseño abstracto y vanguardista.</p>
+                                    <ul class="list-inline">
+                                        
+                                        <li>
+                                            <strong>Precio:</strong>
+                                            $1,819.30
+                                        </li>
+                                    </ul>
+                                     <button class="btn btn-primary btn-xl text-uppercase" type="submit">
+                                        Agregar al carrito
+                                    </button>
+                                </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio item 25 modal popup-->
+        <div class="portfolio-modal modal fade" id="portfolioModal25" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <form role="form" action="agregar_carrito25.PHP" method="post"> 
+                                    <h2 class="text-uppercase">Cancel</h2>
+                                    <p class="item-intro text-muted">Canceles AGA</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/25.jpg" alt="..." />
+                                    <p>Cancel para baño con paneles de cristal y herrajes de acero inoxidable.</p>
+                                    <ul class="list-inline">
+                                        
+                                        <li>
+                                            <strong>Precio:</strong>
+                                            $10,465.00
+                                        </li>
+                                    </ul>
+                                     <button class="btn btn-primary btn-xl text-uppercase" type="submit">
+                                        Agregar al carrito
+                                    </button>
+                                </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio item 26 modal popup-->
+        <div class="portfolio-modal modal fade" id="portfolioModal26" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <form role="form" action="agregar_carrito26.PHP" method="post"> 
+                                    <h2 class="text-uppercase">Toalla</h2>
+                                    <p class="item-intro text-muted">DIMFORSEN</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/26.jpg" alt="..." />
+                                    <p>Toalla de baño color blanco suave y agradable con una trabilla para colgarla.</p>
+                                    <ul class="list-inline">
+                                        
+                                        <li>
+                                            <strong>Precio:</strong>
+                                            $249.00
+                                        </li>
+                                    </ul>
+                                     <button class="btn btn-primary btn-xl text-uppercase" type="submit">
+                                        Agregar al carrito
+                                    </button>
+                                </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio item 27 modal popup-->
+        <div class="portfolio-modal modal fade" id="portfolioModal27" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <form role="form" action="agregar_carrito27.PHP" method="post"> 
+                                    <h2 class="text-uppercase">Cortina</h2>
+                                    <p class="item-intro text-muted">Hauman Brand</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/27.jpg" alt="..." />
+                                    <p>Cortina para baño de facil colocación color gris de 230 cm X 130 cm.</p>
+                                    <ul class="list-inline">
+                                        
+                                        <li>
+                                            <strong>Precio:</strong>
+                                            $524.25
+                                        </li>
+                                    </ul>
+                                     <button class="btn btn-primary btn-xl text-uppercase" type="submit">
+                                        Agregar al carrito
+                                    </button>
+                                </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio item 28 modal popup-->
+        <div class="portfolio-modal modal fade" id="portfolioModal28" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <form role="form" action="agregar_carrito28.PHP" method="post"> 
+                                    <h2 class="text-uppercase">Lavadora</h2>
+                                    <p class="item-intro text-muted">LG</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/28.jpg" alt="..." />
+                                    <p>Lavadora altamente eficiente con reducción de ruido y no daña la ropa.</p>
+                                    <ul class="list-inline">
+                                        
+                                        <li>
+                                            <strong>Precio:</strong>
+                                            $17,599
+                                        </li>
+                                    </ul>
+                                     <button class="btn btn-primary btn-xl text-uppercase" type="submit">
+                                        Agregar al carrito
+                                    </button>
+                                </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio item 29 modal popup-->
+        <div class="portfolio-modal modal fade" id="portfolioModal29" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <form role="form" action="agregar_carrito29.PHP" method="post"> 
+                                    <h2 class="text-uppercase">Colchón</h2>
+                                    <p class="item-intro text-muted">Luuna One</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/29.jpg" alt="..." />
+                                    <p>Colchón King Size memory foam de nueva generación es el más avanzado de México con espumas certificadas.</p>
+                                    <ul class="list-inline">
+                                      
+                                        <li>
+                                            <strong>Precio:</strong>
+                                            $53,299.00
+                                        </li>
+                                    </ul>
+                                     <button class="btn btn-primary btn-xl text-uppercase" type="submit">
+                                        Agregar al carrito
+                                    </button>
+                                </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio item 30 modal popup-->
+        <div class="portfolio-modal modal fade" id="portfolioModal30" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <form role="form" action="agregar_carrito30.PHP" method="post"> 
+                                    <h2 class="text-uppercase">Plancha</h2>
+                                    <p class="item-intro text-muted">Oster</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/30.jpg" alt="..." />
+                                    <p>Plancha de vapor antirayones color verde eficiente y compacta.</p>
+                                    <ul class="list-inline">
+                                       
+                                        <li>
+                                            <strong>Precio:</strong>
+                                            $349.00
+                                        </li>
+                                    </ul>
+                                     <button class="btn btn-primary btn-xl text-uppercase" type="submit">
+                                        Agregar al carrito
+                                    </button>
+                                </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <var></var>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <!-- * *                               SB Forms JS                               * *-->
+        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    </body>
+</html>
