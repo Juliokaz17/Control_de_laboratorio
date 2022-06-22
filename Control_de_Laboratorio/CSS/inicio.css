@@ -16,10 +16,22 @@ body {
 
 .form_position{
     position: relative;
-    top: 50px; 
+    top: 50px;
+    width: 30%;
+    left:390px; 
+
 }
 
 .container_footer{
     position: relative;
-    left: 3px; 
+    top: 40px; 
+}
+
+.footer-line{
+    position: relative;
+    top: 50px;
+}
+
+.navbar-custom{
+    background-color:#0A4DA9
 }

@@ -18,7 +18,7 @@
   <body>
     
 
-  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+  <nav class="navbar navbar-custom navbar-expand-md navbar-dark fixed-top">
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
@@ -42,40 +42,40 @@
     <div class="row">
         <div class="col-md-6 mb-4">
             <div class="form-outline">
-                <input type="text" name="nombre" id="form3Example1" class="form-control" />
-                <label class="form-label" for="form3Example1">Nombre</label>
+                <input type="text" name="nombre" placeholder="Máx. 10 caracteres" maxlength="10" class="form-control" />
+                <label class="form-label">Nombre</label>
             </div>
         </div>
         <div class="col-md-6 mb-4">
             <div class="form-outline">
-                <input type="text" name="apellido" id="form3Example2" class="form-control"/>
-                <label class="form-label" for="form3Example2">Apellido paterno</label>
+                <input type="text" name="apellido" placeholder="Máx. 10 caracteres" maxlength="10" class="form-control"/>
+                <label class="form-label">Apellido paterno</label>
             </div>
         </div>
     </div>
 
         <!--Puesto-->
         <div class="form-outline mb-4">
-          <input type="text" name="puesto" class="form-control" placeholder="TI"/>
-          <label class="form-label" for="form2Example1">Puesto</label>
+          <input type="text" name="puesto" class="form-control" placeholder="Laboratorista, Administrador o Ejecutivo" maxlength="13"/>
+          <label class="form-label">Puesto</label>
         </div>
 
         <!--Derechos-->
-        <div class="form-outline mb-4">
+        <!-- <div class="form-outline mb-4">
           <input type="text" name="derechos" class="form-control" placeholder="(Laboratorista o Administrador)"/>
           <label class="form-label" for="form2Example1">Derechos</label>
-        </div>
+        </div> -->
       
         <!--Correo-->
         <div class="form-outline mb-4">
-          <input type="email" name="email" class="form-control" />
-          <label class="form-label" for="form2Example1">Correo</label>
+          <input type="email" name="email" class="form-control" placeholder="Máx. 30 caracteres" maxlength="30"/>
+          <label class="form-label">Correo</label>
         </div>
 
         <!--Contraseña-->
         <div class="form-outline mb-4">
-          <input type="password" name="contrasena" class="form-control" />
-          <label class="form-label" for="form2Example2">Contraseña</label>
+          <input type="password" name="contrasena" class="form-control" minlength="6" placeholder="Min 6 caracteres Máx. 12 caracteres" maxlength="12"/>
+          <label class="form-label">Contraseña</label>
         </div>
       
         <!-- Espacio entre contraseña y boton sign in -->
@@ -84,7 +84,7 @@
         </div>
 
         <!-- Iniciar sesion button -->
-        <button type="submit" class="btn btn-primary btn-block mb-4">Registrarse</button>
+        <button type="submit" class="btn btn-primary btn-block mb-4">Registrarse</button><br>
     </form>
     </div>
 </body>
@@ -107,7 +107,7 @@
         //Nombres juntados
         $nombreFinal = $nombre . ' ' . $apellido;
         $puesto = mysqli_real_escape_string($con, $_POST['puesto']);
-        $derechos = mysqli_real_escape_string($con, $_POST['derechos']);
+        
         $correo = mysqli_real_escape_string($con, $_POST['email']);
         $password = mysqli_real_escape_string($con, $_POST['contrasena']);
         
@@ -121,7 +121,7 @@
           die('Error: ' . mysqli_error($con));
         }
         //Usamos redirect
-        header("Location:inicio.php");
+        header("Location:http://localhost/Julio_XAMPP/Control_de_Laboratorio/PHP/inicio.php");
         exit();
       mysqli_close($con);
       ?>

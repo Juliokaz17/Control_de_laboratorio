@@ -1,20 +1,39 @@
 function validarFormulario() {
-    var x = document.forms["formulario"]["derechos"].value;
-    if (x == null || x == "") {
-      alert("Debe llenar el campo de Derechos");
-      return false;
-    } else if(x!=="Laboratorista" && x!=="Administrador"){
-      alert("El derecho ingresado no existe");
-      return false;
-    };
-
     var y = document.forms["formulario"]["puesto"].value;
     if (y == null || y == "") {
-      alert("Debe llenar el campo de Puesto");
+      alert("Debe llenar los campos vacios");
       return false;
-    } else if(y!=="TI"){
+    }else if(y!=="Laboratorista" && y!=="Administrador" && y!=="Ejecutivo"){
       alert("El puesto ingresado no existe");
       return false;
     };
+    
+    var x = document.forms["formulario"]["nombre"].value;
+    if (x == null || x == "") {
+      alert("Debe llenar los campos vacios");
+      return false;
+    };
+
+    var z = document.forms["formulario"]["apellido"].value;
+    if (z == null || z == "") {
+      alert("Debe llenar los campos vacios");
+      return false;
+    };
+
+    var r = document.forms["formulario"]["email"].value;
+    if (r == null || r == "") {
+      alert("Debe llenar los campos vacios");
+      return false;
+    };
+
+    var i = document.forms["formulario"]["contrasena"].value;
+    if(i == null || i == ""){
+      alert("Debe llenar los campos vacios");
+      return false;
+    };
     alert("Cuenta creada exitosamente");
-  }
+};
+
+
+
+  

@@ -16,5 +16,12 @@ body {
 
 .form_position{
     position: relative;
-    top:50px; 
+    top: 50px;
+    width: 31%;
+    left:380px; 
 }
+
+.navbar-custom{
+    background-color:#0A4DA9
+}
+
