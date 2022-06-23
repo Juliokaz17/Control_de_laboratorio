@@ -37,7 +37,7 @@
     <form class="form_position" role="form" method="post">
         <!--Correo-->
         <div class="form-outline mb-4">
-          <input type="email" name="email" maxlength="30" placeholder="Máx. 30 caracteres" class="form-control" />
+          <input type="email" name="correo" maxlength="30" placeholder="Máx. 30 caracteres" class="form-control" />
           <label class="form-label">Correo</label>
         </div>
         <!--Contraseña-->
@@ -66,4 +66,56 @@
       <p>Julio César Velázquez Corona - Diego Mario Veytia Leyvas</p>
       </footer>
     </div>
+    <?php
+    //oculto todos los errores
+    error_reporting(0);
+    ini_set('display_errors', 0);
+
+    $con=mysqli_connect("localhost","root","","control_laboratorio");
+
+        // Checo conexion
+        if (mysqli_connect_errno()) {
+          echo "Failed to connect to MySQL: " . mysqli_connect_error();
+        }
+        
+        //Abrimos una sesion
+        session_start();
+
+         // Guardo en las variables
+         $correo = mysqli_real_escape_string($con, $_POST['correo']);
+         $password = mysqli_real_escape_string($con, $_POST['contrasena']);
+
+         if($correo<>NULL and $password<>NULL){
+          //Hacemos la query que busca el usuario y contraseña en la tabla, tiene limit 1 porque encontrará rapidamente el primer valor
+          $result="select * from usuarios WHERE Correo='$correo' and Contrasena='$password' limit 1;";
+          $nombre="select nombre from usuarios WHERE Correo='$correo' and Contrasena='$password' limit 1;";
+        }else{
+          //echo "Registra los datos";
+        }
+
+        //Si falla la conexión
+        if (!mysqli_query($con,$result)) {
+          die('Error: ' . mysqli_error($con));
+        }
+
+        //Obtenemos la query, por alguna razón necesita el $con antes 
+        $sql=mysqli_query($con,$result);
+        $query_nombre=mysqli_query($con,$nombre);
+
+        //El resultado de $query_nombre es un objeto y no necesitamos como string
+        $row = mysqli_fetch_array($query_nombre);
+
+        //Si realmente la query funcionó decir que la sesión existe
+        if(mysqli_num_rows($sql)==1){
+          echo "La sesion existe";
+          //Asignamos resultado del query
+          $_SESSION['nombre_usuario']= $row['nombre'];
+          //Usamos redirect
+          header("Location:http://localhost/Julio_XAMPP/Control_de_Laboratorio/PHP/menu_inicio.php");
+          exit();
+        }else{
+          echo "La sesion no existe";
+        }
+      mysqli_close($con);
+    ?>
 </body>

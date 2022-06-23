@@ -1,0 +1,143 @@
+.boton-1{
+    padding: 0;
+    border: none;
+    background: none;
+    position: relative;
+    top: 30px;
+    left: 50px;
+}
+
+.boton-2{
+    padding: 0;
+    border: none;
+    background: none;
+    position: relative;
+    top: 30px;
+    left: 90px;
+}
+
+.boton-3{
+    padding: 0;
+    border: none;
+    background: none;
+    position: relative;
+    top: 30px;
+    left: 45px;
+}
+
+.boton-4{
+    padding: 0;
+    border: none;
+    background: none;
+    position: relative;
+    top: 30px;
+    left: 40px;
+}
+
+.boton-5{
+    padding: 0;
+    border: none;
+    background: none;
+    position: relative;
+    top: 30px;
+    left: 40px;
+}
+
+.boton-6{
+    padding: 0;
+    border: none;
+    background: none;
+    position: relative;
+    top: 30px;
+    left: 75px;
+}
+
+.boton-7{
+    padding: 0;
+    border: none;
+    background: none;
+    position: relative;
+    top: 30px;
+    left: 60px;
+}
+
+body {
+    background-color: #E9ECEF;
+}
+
+.resize {
+    width: 150px;
+    height: auto;
+    position: relative;
+    top: 0px;
+}
+
+.display-4{
+    position: relative;
+    top: 40px;
+}
+
+.form_position{
+    position: relative;
+    top: 50px;
+    width: 30%;
+    left:390px; 
+
+}
+
+.container_footer{
+    position: relative;
+    top: 40px; 
+}
+
+.footer-line{
+    position: relative;
+    top: 20px;
+}
+
+.navbar-custom{
+    background-color:#0A4DA9
+}
+
+/* .jumbotron{
+    background-color:#0A4DA9
+} */
+
+.texto-botones-1{
+    margin-top: -70px;
+    margin-left: 75px;
+}
+
+.texto-botones-2{
+    margin-left: 375px;
+    margin-top: -175px;
+}
+
+.texto-botones-3{
+    margin-left: 750px;
+    margin-top: -175px;
+}
+
+.texto-botones-4{
+    margin-left: 1020px;
+    margin-top: -175px;
+}
+
+.texto-botones-5{
+    margin-left: 230px;;
+    margin-top: 0px;
+}
+
+.texto-botones-6{
+    margin-left: 540px;;
+    margin-top: -175px;
+}
+
+.texto-botones-7{
+    margin-left: 870px;;
+    margin-top: -175px;
+}
+
+body {
+    padding-bottom: 90px;
+}

@@ -113,6 +113,13 @@
         
         //No creo cuentas extras al hacer refresh
         if($nombre<>NULL){
+          if($puesto=="Administrador"){
+            $derechos="Acceso total";
+          }else if($puesto=="Ejecutivo"){
+            $derechos="Consultas";
+          }else if($puesto=="Laboratorista"){
+            $derechos="Altas";
+          }
             $sql="INSERT INTO usuarios (Nombre, Puesto, Derechos, Correo, Contrasena) 
             VALUES ('$nombreFinal', '$puesto', '$derechos', '$correo', '$password');";
           }
