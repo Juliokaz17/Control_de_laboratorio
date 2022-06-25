@@ -1,0 +1,31 @@
+.table{
+    margin-top: 100px;
+}
+
+.form_position{
+    margin-top: 80px; 
+}
+
+.display-4{
+    position: relative;
+    top: 40px;
+}
+
+body {
+    background-color: #E9ECEF;
+}
+
+.resize {
+    width: 150px;
+    height: auto;
+    position: relative;
+    top: 53px;
+}
+
+.navbar-custom{
+    background-color:#0A4DA9
+}
+
+.number-input{
+    margin-top: 80px;
+}

@@ -42,14 +42,14 @@
     <div class="row">
         <div class="col-md-6 mb-4">
             <div class="form-outline">
-                <input type="text" name="nombre" placeholder="Máx. 10 caracteres" maxlength="10" class="form-control" />
+                <input type="text" name="nombre" placeholder="Máx. 20 caracteres" maxlength="20" class="form-control" />
                 <label class="form-label">Nombre</label>
             </div>
         </div>
         <div class="col-md-6 mb-4">
             <div class="form-outline">
-                <input type="text" name="apellido" placeholder="Máx. 10 caracteres" maxlength="10" class="form-control"/>
-                <label class="form-label">Apellido paterno</label>
+                <input type="text" name="apellido" placeholder="Máx. 20 caracteres" maxlength="20" class="form-control"/>
+                <label class="form-label">Apellidos</label>
             </div>
         </div>
     </div>
