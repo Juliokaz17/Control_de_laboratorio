@@ -102,7 +102,7 @@
         $sql=mysqli_query($con,$result);
         $query_nombre=mysqli_query($con,$nombre);
 
-        //El resultado de $query_nombre es un objeto y no necesitamos como string
+        //El resultado de $query_nombre es un objeto y lo necesitamos como string
         $row = mysqli_fetch_array($query_nombre);
 
         //Si realmente la query funcionó decir que la sesión existe
@@ -114,7 +114,8 @@
           header("Location:http://localhost/Julio_XAMPP/Control_de_Laboratorio/PHP/menu_inicio.php");
           exit();
         }else{
-          echo "La sesion no existe";
+          $fallo="La sesion no existe";
+          echo "<script type='text/javascript'>alert('$fallo');</script>";
         }
       mysqli_close($con);
     ?>

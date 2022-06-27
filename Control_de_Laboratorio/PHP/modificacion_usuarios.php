@@ -7,7 +7,6 @@
     }
     $result = mysqli_query($con,"SELECT * FROM usuarios;");
     ?>
-  
 <!doctype html>
 <html lang="es">
   <head>
@@ -17,13 +16,13 @@
     <meta name="author" content="">
     <title>Control de laboratorio</title>
     <!-- Src de JavaScript -->
-    <script type="text/javascript" src="http://localhost/Julio_XAMPP/Control_de_Laboratorio/JavaScript/usuarios.js"></script>
+    <script type="text/javascript" src="http://localhost/Julio_XAMPP/Control_de_Laboratorio/JavaScript/modificacion_usuarios.js"></script>
     <!-- Src de Bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
-    <link href="http://localhost/Julio_XAMPP/Control_de_Laboratorio/CSS/usuarios.css" rel="stylesheet">
+    <link href="http://localhost/Julio_XAMPP/Control_de_Laboratorio/CSS/modificacion_usuarios.css" rel="stylesheet">
   </head>
   <body>
   <nav class="navbar navbar-custom navbar-expand-md navbar-dark fixed-top">
@@ -47,75 +46,80 @@
     <div class="container">
         <div class="text-center">
             <img class="resize" src="http://localhost/Julio_XAMPP/Control_de_Laboratorio/Assets/logo.png">
-            <h1 class="display-4">Tabla de usuarios</h1>
+            <h1 class="display-4">Modificar un usuario</h1>
         </div>   
     </div>
-    <div class="container">
-        <table class="table">
-          <thead>
-            <tr>
-              <th>Nombre</th>
-              <th>Puesto</th>
-              <th>Derechos</th>
-              <th>Correo</th>
-              <th>Contraseña</th>
-              <th>ID</th>
-            </tr>
-          </thead>
-          <tbody>
-        <?php
-            while($row = mysqli_fetch_array($result)){
-              echo "<tr>";
-              echo "<td>" . $row['Nombre'] . "</td>";
-              echo "<td>" . $row['Puesto'] . "</td>";
-              echo "<td>" . $row['Derechos'] . "</td>";
-              echo "<td>" . $row['Correo'] . "</td>";
-              echo "<td>" . $row['Contrasena'] . "</td>";
-              echo "<td>" . $row['id'] . "</td>";
-              echo "</tr>";
-            }
-            mysqli_close($con);
-          ?>  
-          </tbody>
-        </table>
-      </div>
 
 
     <div class="container">
-
-      <form role="form" method="post" class="form_position">
-        <div class="input-group mb-3 w-25">
-          <input type="number" name="id" class="form-control" min=1 max=100 placeholder="ID">
-            <div class="input-group-append">
-              <button class="btn btn-danger" type="submit">Borrar</button>
+    <form name="formulario" class="form_position" role="form" method="post" onsubmit="return validarFormulario()">
+    <!-- Nombre y apellido paterno -->
+    <div class="row">
+        <div class="col-md-6 mb-4">
+            <div class="form-outline">
+                <input type="number" name="id" placeholder="1 al 100" class="form-control" />
+                <label class="form-label">ID</label>
             </div>
-        </div>  
-      </form>
+        </div>
+        <div class="col-md-6 mb-4">
+            <div class="form-outline">
+                <input type="text" name="nombre" placeholder="Máx. 20 caracteres" maxlength="20" class="form-control"/>
+                <label class="form-label">Nombre nuevo</label>
+            </div>
+        </div>
     </div>
-  </body>
+        <!--Puesto-->
+        <div class="form-outline mb-4">
+          <input type="text" name="puesto" class="form-control" placeholder="Laboratorista, Administrador o Ejecutivo" maxlength="13"/>
+          <label class="form-label">Puesto nuevo</label>
+        </div>
+        <!--Correo-->
+        <div class="form-outline mb-4">
+          <input type="email" name="email" class="form-control" placeholder="Máx. 30 caracteres" maxlength="30"/>
+          <label class="form-label">Correo nuevo</label>
+        </div>
+        <!--Contraseña-->
+        <div class="form-outline mb-4">
+          <input type="password" name="contrasena" class="form-control" minlength="6" placeholder="Min 6 caracteres Máx. 12 caracteres" maxlength="12"/>
+          <label class="form-label">Contraseña nueva</label>
+        </div>
+        <!-- Espacio entre contraseña y boton sign in -->
+        <div class="row sm-4">
+          <div class="col d-flex justify-content-center"></div>
+        </div>
+        <!-- Iniciar sesion button -->
+        <button type="submit" class="btn btn-info btn-block mb-4">Modificar</button><br>
+    </form>
+    </div>
+</body>
     <?php
         //oculto todos los errores
         error_reporting(0);
         ini_set('display_errors', 0);
-        
         $con=mysqli_connect("localhost","root","","control_laboratorio");
-
         // Checo conexion
         if (mysqli_connect_errno()) {
           echo "Failed to connect to MySQL: " . mysqli_connect_error();
         }
-
         // Guardo en la variable
         $id = mysqli_real_escape_string($con, $_POST['id']);
+        $nombre = mysqli_real_escape_string($con, $_POST['nombre']);
+        $puesto = mysqli_real_escape_string($con, $_POST['puesto']);
+        if($puesto=="Laboratorista"){
+            $derechos="Altas";
+        }else if($puesto=="Administrador"){
+            $derechos="Acceso total";
+        }else if($puesto=="Ejecutivo"){
+            $derechos="Consultas";
+        }
+        $correo = mysqli_real_escape_string($con, $_POST['email']);
+        $password = mysqli_real_escape_string($con, $_POST['contrasena']);
         //No ejecuto al hacer refresh
         if($id<>NULL){
-            $sql="DELETE FROM usuarios WHERE id=$id;";
+            $sql="UPDATE usuarios SET Nombre='$nombre', Puesto='$puesto', Derechos='$derechos', Correo='$correo', Contrasena='$password' WHERE id=$id;";
           }
         if(!mysqli_query($con,$sql)) {
           die('Error: ' . mysqli_error($con));
         }
-        //Usamos redirect
-        header("Location:http://localhost/Julio_XAMPP/Control_de_Laboratorio/PHP/usuarios.php");
-        exit();
       mysqli_close($con);
       ?>
