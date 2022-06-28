@@ -112,6 +112,7 @@
 
         <div class="texto-botones-5">
             <h1 class="display-4">Eqs. Lab</h1>
+            <a href="http://localhost/Julio_XAMPP/Control_de_Laboratorio/PHP/eqs_laboratorio.php"
                 <button type="button" class="boton-5">
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-microscope" width="100" height="100" viewBox="0 0 24 24" stroke-width="1" stroke="#0A4DA9" fill="none" stroke-linecap="round" stroke-linejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
@@ -123,7 +124,7 @@
                         <path d="M17 3l3 3" />
                         <path d="M12 21a6 6 0 0 0 3.715 -10.712" />
                     </svg>
-                </button> 
+                </button></a>
         </div>
 
         <div class="texto-botones-6">
