@@ -33,7 +33,7 @@
            <a class="nav-link" href="http://localhost/Julio_XAMPP/Control_de_Laboratorio/PHP/modificacion_equipos.php">Modificación de equipo<span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item active">
-           <a class="nav-link" href="http://localhost/Julio_XAMPP/Control_de_Laboratorio/PHP/registro_equipo_again.php">Inactivación de equipo<span class="sr-only">(current)</span></a>
+           <a class="nav-link" href="http://localhost/Julio_XAMPP/Control_de_Laboratorio/PHP/inactivacion_equipos.php">Inactivación de equipo<span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item active">
            <a class="nav-link" href="http://localhost/Julio_XAMPP/Control_de_Laboratorio/PHP/registro_equipo_again.php">Volver a registrar equipo<span class="sr-only">(current)</span></a>

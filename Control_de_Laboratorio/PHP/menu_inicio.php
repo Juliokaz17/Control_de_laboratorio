@@ -85,6 +85,7 @@
         
         <div class="texto-botones-3">
             <h1 class="display-4">Clientes</h1>
+            <a href="http://localhost/Julio_XAMPP/Control_de_Laboratorio/PHP/alta_clientes.php"
                 <button type="button" class="boton-3">
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-users" width="100" height="100" viewBox="0 0 24 24" stroke-width="1" stroke="#0A4DA9" fill="none" stroke-linecap="round" stroke-linejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
@@ -94,6 +95,7 @@
                         <path d="M21 21v-2a4 4 0 0 0 -3 -3.85" />
                     </svg>
                 </button> 
+            </a>
         </div>
 
         <div class="texto-botones-4">

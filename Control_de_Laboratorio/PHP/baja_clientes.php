@@ -5,7 +5,7 @@
     if (mysqli_connect_errno()) {
       echo "Failed to connect to MySQL: " . mysqli_connect_error();
     }
-    $result = mysqli_query($con,"SELECT * FROM equipos_laboratorio;");
+    $result = mysqli_query($con,"SELECT * FROM cliente;");
     ?>
   
 <!doctype html>
@@ -33,16 +33,16 @@
            <a class="nav-link" href="http://localhost/Julio_XAMPP/Control_de_Laboratorio/PHP/menu_inicio.php">Menú de inicio<span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item active">
-           <a class="nav-link" href="http://localhost/Julio_XAMPP/Control_de_Laboratorio/PHP/baja_equipos_laboratorio.php">Baja y tabla de equipos<span class="sr-only">(current)</span></a>
+           <a class="nav-link" href="http://localhost/Julio_XAMPP/Control_de_Laboratorio/PHP/baja_clientes.php">Baja y tabla de clientes<span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item active">
-           <a class="nav-link" href="http://localhost/Julio_XAMPP/Control_de_Laboratorio/PHP/modificacion_equipos.php">Modificación de equipo<span class="sr-only">(current)</span></a>
+           <a class="nav-link" href="http://localhost/Julio_XAMPP/Control_de_Laboratorio/PHP/modificacion_clientes.php">Modificación de clientes<span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item active">
-           <a class="nav-link" href="http://localhost/Julio_XAMPP/Control_de_Laboratorio/PHP/inactivacion_equipos.php">Inactivación de equipo<span class="sr-only">(current)</span></a>
+           <a class="nav-link" href="http://localhost/Julio_XAMPP/Control_de_Laboratorio/PHP/inactivacion_clientes.php">Inactivación de clientes<span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item active">
-           <a class="nav-link" href="http://localhost/Julio_XAMPP/Control_de_Laboratorio/PHP/eqs_laboratorio.php">Alta de equipos<span class="sr-only">(current)</span></a>
+           <a class="nav-link" href="http://localhost/Julio_XAMPP/Control_de_Laboratorio/PHP/registro_clientes_again.php">Volver a registrar cliente<span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item active">
             <a class="nav-link" href="http://localhost/Julio_XAMPP/Control_de_Laboratorio/PHP/cerrar_sesion.php">Cerrar sesión<span class="sr-only">(current)</span></a>
@@ -53,43 +53,37 @@
     <div class="container">
         <div class="text-center">
             <img class="resize" src="http://localhost/Julio_XAMPP/Control_de_Laboratorio/Assets/logo.png">
-            <h1 class="display-4">Tabla de equipos de laboratorio</h1>
+            <h1 class="display-4">Tabla de clientes</h1>
         </div>   
     </div>
     <div class="container">
         <table class="table">
           <thead>
             <tr>
-              <th>Clave de equipo</th>
-              <th>Marca</th>
-              <th>Modelo</th>
-              <th>Serie</th>
-              <th>Descripcion</th>
-              <th>Proveedor</th>
-              <th>Fecha de adquisición</th>
-              <th>Garantia</th>
-              <th>Vigencia de garantia</th>
-              <th>Ubicación de equipo</th>
-              <th>Responsable de equipo</th>
-              <th>Mantenimiento</th>
+              <th>Clave de cliente</th>
+              <th>Nombre de cliente</th>
+              <th>RFC</th>
+              <th>Domicilio de entrega</th>
+              <th>Factores particulares</th>
+              <th>Nombre del contacto</th>
+              <th>Correo del contacto</th>
+              <th>Telefono del contacto</th>
+              <th>Puesto del contacto</th>
             </tr>
           </thead>
           <tbody>
         <?php
             while($row = mysqli_fetch_array($result)){
               echo "<tr>";
-              echo "<td>" . $row['Clv_Equipo'] . "</td>";
-              echo "<td>" . $row['Marca'] . "</td>";
-              echo "<td>" . $row['Modelo'] . "</td>";
-              echo "<td>" . $row['Serie'] . "</td>";
-              echo "<td>" . $row['Descripcion'] . "</td>";
-              echo "<td>" . $row['Proveedor'] . "</td>";
-              echo "<td>" . $row['Fecha_adquisicion'] . "</td>";
-              echo "<td>" . $row['Garantia'] . "</td>";
-              echo "<td>" . $row['Vigencia_garantia'] . "</td>";
-              echo "<td>" . $row['Ubic_equipo'] . "</td>";
-              echo "<td>" . $row['Responsable_equipo'] . "</td>";
-              echo "<td>" . $row['Mantenimiento'] . "</td>";
+              echo "<td>" . $row['Clv_cliente'] . "</td>";
+              echo "<td>" . $row['Nombre_cliente'] . "</td>";
+              echo "<td>" . $row['RFC'] . "</td>";
+              echo "<td>" . $row['Domicilio_entrega'] . "</td>";
+              echo "<td>" . $row['Factores_particulares'] . "</td>";
+              echo "<td>" . $row['Nombre_contacto'] . "</td>";
+              echo "<td>" . $row['Correo_contacto'] . "</td>";
+              echo "<td>" . $row['Telefono_contacto'] . "</td>";
+              echo "<td>" . $row['Puesto_contacto'] . "</td>";
               echo "</tr>";
             }
             mysqli_close($con);
@@ -127,7 +121,7 @@
         $id = mysqli_real_escape_string($con, $_POST['id']);
         //No ejecuto al hacer refresh
         if($id<>NULL){
-            $sql="DELETE FROM equipos_laboratorio WHERE Clv_Equipo=$id;";
+            $sql="DELETE FROM cliente WHERE Clv_cliente=$id;";
           }
         if(!mysqli_query($con,$sql)) {
           die('Error: ' . mysqli_error($con));

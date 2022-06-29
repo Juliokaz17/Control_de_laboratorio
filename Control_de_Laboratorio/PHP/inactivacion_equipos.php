@@ -103,9 +103,9 @@
 
       <form role="form" method="post" class="form_position">
         <div class="input-group mb-3 w-25">
-          <input type="number" name="id" class="form-control" min=1 placeholder="ID">
+          <input type="number" name="id" class="form-control" min=1 max=100 placeholder="ID">
             <div class="input-group-append">
-              <button class="btn btn-danger" type="submit">Borrar</button>
+              <button class="btn btn-secondary" type="submit">Inactivar</button>
             </div>
         </div>  
       </form>
@@ -126,10 +126,22 @@
         // Guardo en la variable
         $id = mysqli_real_escape_string($con, $_POST['id']);
         //No ejecuto al hacer refresh
+        //Vamos a hacer que a los equipos desactivado les ponga ID 999
+        
         if($id<>NULL){
-            $sql="DELETE FROM equipos_laboratorio WHERE Clv_Equipo=$id;";
+          $sql1="SELECT max(Clv_equipo) FROM equipos_laboratorio;";
+          $result = mysqli_query($con,$sql1);
+          while($row = mysqli_fetch_array($result)) {
+            echo $row['max(Clv_equipo)'];
+            $id_maximo=$row['max(Clv_equipo)'];
+            if($id_maximo<999){
+              $id_maximo=$id_maximo+999;
           }
-        if(!mysqli_query($con,$sql)) {
+        }
+         
+          $sql2 = "UPDATE equipos_laboratorio SET Clv_equipo=$id_maximo+1 WHERE Clv_equipo=$id;";
+          }
+        if(!mysqli_query($con,$sql2)) {
           die('Error: ' . mysqli_error($con));
         }
       mysqli_close($con);
