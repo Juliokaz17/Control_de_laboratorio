@@ -29,6 +29,7 @@
     <link href="http://localhost/Julio_XAMPP/Control_de_Laboratorio/CSS/menu_inicio.css" rel="stylesheet">
   </head>
   <body>
+    
   <!-- Nav bar -->
   <nav class="navbar navbar-custom navbar-expand-md navbar-dark fixed-top">
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">

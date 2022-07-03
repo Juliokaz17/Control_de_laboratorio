@@ -94,7 +94,6 @@
 
 
     <div class="container">
-
       <form role="form" method="post" class="form_position">
         <div class="input-group mb-3 w-25">
           <input type="number" name="id" class="form-control" min=1 placeholder="ID">

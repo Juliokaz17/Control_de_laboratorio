@@ -26,7 +26,7 @@
             <a class="nav-link" href="http://localhost/Julio_XAMPP/Control_de_Laboratorio/PHP/menu_inicio.php">Menú de inicio<span class="sr-only">(current)</span></a>
           </li>
         <li class="nav-item active">
-            <a class="nav-link" href="http://localhost/Julio_XAMPP/Control_de_Laboratorio/PHP/usuarios.php">Tabla de usuarios<span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="http://localhost/Julio_XAMPP/Control_de_Laboratorio/PHP/eqs_laboratorio.php">Tabla de equipos<span class="sr-only">(current)</span></a>
           </li>
         </ul>
       </div>
@@ -34,7 +34,7 @@
     <div class="container">
         <div class="text-center">
             <img class="resize" src="http://localhost/Julio_XAMPP/Control_de_Laboratorio/Assets/logo.png">
-            <h1 class="display-4">Modificar un usuario</h1>
+            <h1 class="display-4">Borrar un equipo</h1>
         </div>   
     </div>
 
@@ -43,21 +43,20 @@
         <div class="input-group mb-3 w-25">
           <input type="number" name="id" class="form-control" min=1 placeholder="ID">
             <div class="input-group-append">
-              <button class="btn btn-info" type="submit">Modificar</button>
+              <button class="btn btn-danger" type="submit">Borrar</button>
             </div>
         </div>  
       </form>
     </div>
 
     <div class="container">
-        <div class="alert alert-primary" role="alert">
-        Seleccionar el ID a modificar.
+        <div class="alert alert-warning" role="alert">
+        Aviso: tienes que estar seguro de lo que vas a hacer.
         </div>
     </div>
 
   </body>
     <?php
-        session_start();
         //oculto todos los errores
         error_reporting(0);
         ini_set('display_errors', 0);
@@ -71,7 +70,7 @@
 
         // Guardo en la variable
         $id = mysqli_real_escape_string($con, $_POST['id']);
-        $checarID="SELECT * FROM usuarios WHERE id=$id;";
+        $checarID="SELECT * FROM equipos_laboratorio WHERE Clv_Equipo=$id;";
         $resultadoChecarID=mysqli_query($con,$checarID);
 
         //No ejecuto al hacer refresh
@@ -79,17 +78,19 @@
           ?>
         <div class="container">
           <div class="alert alert-danger" role="alert">
-            Error: el ID elegido no existe.
+            Error: el equipo elegido elegido no existe.
           </div>
         </div>
         <?php
         }else{
-          $_SESSION['idModificar']=$id;
-          header("Location:http://localhost/Julio_XAMPP/Control_de_Laboratorio/PHP/modificacion_usuarios_query.php");
-          exit();
+            $sql="DELETE FROM equipos_laboratorio WHERE Clv_Equipo=$id;";
         }
+
         if(!mysqli_query($con,$sql)) {
           die('Error: ' . mysqli_error($con));
         }
+        //Usamos redirect
+        header("Location:http://localhost/Julio_XAMPP/Control_de_Laboratorio/PHP/eqs_laboratorio.php");
+        exit();
       mysqli_close($con);
       ?>

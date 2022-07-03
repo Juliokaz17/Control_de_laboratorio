@@ -30,16 +30,13 @@
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
+            <a class="nav-link" href="http://localhost/Julio_XAMPP/Control_de_Laboratorio/PHP/cerrar_sesion.php">Cerrar sesión<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
             <a class="nav-link" href="http://localhost/Julio_XAMPP/Control_de_Laboratorio/PHP/menu_inicio.php">Menú de inicio<span class="sr-only">(current)</span></a>
           </li>
         <li class="nav-item active">
             <a class="nav-link" href="http://localhost/Julio_XAMPP/Control_de_Laboratorio/PHP/usuarios.php">Tabla de usuarios<span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="http://localhost/Julio_XAMPP/Control_de_Laboratorio/PHP/modificacion_usuarios.php">Modificar usuario<span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="http://localhost/Julio_XAMPP/Control_de_Laboratorio/PHP/cerrar_sesion.php">Cerrar sesión<span class="sr-only">(current)</span></a>
           </li>
         </ul>
       </div>
@@ -54,24 +51,24 @@
         <table class="table">
           <thead>
             <tr>
+              <th>ID</th>
               <th>Nombre</th>
               <th>Puesto</th>
               <th>Derechos</th>
               <th>Correo</th>
               <th>Contraseña</th>
-              <th>ID</th>
             </tr>
           </thead>
           <tbody>
         <?php
             while($row = mysqli_fetch_array($result)){
               echo "<tr>";
+              echo "<td>" . $row['ID'] . "</td>";
               echo "<td>" . $row['Nombre'] . "</td>";
               echo "<td>" . $row['Puesto'] . "</td>";
               echo "<td>" . $row['Derechos'] . "</td>";
               echo "<td>" . $row['Correo'] . "</td>";
               echo "<td>" . $row['Contrasena'] . "</td>";
-              echo "<td>" . $row['id'] . "</td>";
               echo "</tr>";
             }
             mysqli_close($con);
@@ -80,42 +77,10 @@
         </table>
       </div>
 
-
-    <div class="container">
-
-      <form role="form" method="post" class="form_position">
-        <div class="input-group mb-3 w-25">
-          <input type="number" name="id" class="form-control" min=1 max=100 placeholder="ID">
-            <div class="input-group-append">
-              <button class="btn btn-danger" type="submit">Borrar</button>
-            </div>
-        </div>  
-      </form>
+    <div class="d-flex justify-content-center">
+      <div class="col-xs-3">
+        <a href="http://localhost/Julio_XAMPP/Control_de_Laboratorio/PHP/borrar_usuario.php" <button class="btn btn-danger">Borrar usuario</button></a>
+        <a href="http://localhost/Julio_XAMPP/Control_de_Laboratorio/PHP/modificacion_usuarios.php" <button class="btn btn-info" type="submit">Modificar usuario</button></a>    
+      </div>
     </div>
   </body>
-    <?php
-        //oculto todos los errores
-        error_reporting(0);
-        ini_set('display_errors', 0);
-        
-        $con=mysqli_connect("localhost","root","","control_laboratorio");
-
-        // Checo conexion
-        if (mysqli_connect_errno()) {
-          echo "Failed to connect to MySQL: " . mysqli_connect_error();
-        }
-
-        // Guardo en la variable
-        $id = mysqli_real_escape_string($con, $_POST['id']);
-        //No ejecuto al hacer refresh
-        if($id<>NULL){
-            $sql="DELETE FROM usuarios WHERE id=$id;";
-          }
-        if(!mysqli_query($con,$sql)) {
-          die('Error: ' . mysqli_error($con));
-        }
-        //Usamos redirect
-        header("Location:http://localhost/Julio_XAMPP/Control_de_Laboratorio/PHP/usuarios.php");
-        exit();
-      mysqli_close($con);
-      ?>

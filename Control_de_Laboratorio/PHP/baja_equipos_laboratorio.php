@@ -1,13 +1,3 @@
-<?php
-    session_start();
-    $con=mysqli_connect("localhost","root","","control_laboratorio");
-    // Check connection
-    if (mysqli_connect_errno()) {
-      echo "Failed to connect to MySQL: " . mysqli_connect_error();
-    }
-    $result = mysqli_query($con,"SELECT * FROM equipos_laboratorio;");
-    ?>
-  
 <!doctype html>
 <html lang="es">
   <head>

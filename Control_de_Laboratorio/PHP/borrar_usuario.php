@@ -34,7 +34,7 @@
     <div class="container">
         <div class="text-center">
             <img class="resize" src="http://localhost/Julio_XAMPP/Control_de_Laboratorio/Assets/logo.png">
-            <h1 class="display-4">Modificar un usuario</h1>
+            <h1 class="display-4">Borrar un usuario</h1>
         </div>   
     </div>
 
@@ -43,21 +43,20 @@
         <div class="input-group mb-3 w-25">
           <input type="number" name="id" class="form-control" min=1 placeholder="ID">
             <div class="input-group-append">
-              <button class="btn btn-info" type="submit">Modificar</button>
+              <button class="btn btn-danger" type="submit">Borrar</button>
             </div>
         </div>  
       </form>
     </div>
 
     <div class="container">
-        <div class="alert alert-primary" role="alert">
-        Seleccionar el ID a modificar.
+        <div class="alert alert-warning" role="alert">
+        Aviso: tienes que estar seguro de lo que vas a hacer.
         </div>
     </div>
 
   </body>
     <?php
-        session_start();
         //oculto todos los errores
         error_reporting(0);
         ini_set('display_errors', 0);
@@ -83,13 +82,23 @@
           </div>
         </div>
         <?php
+        }else if($id==1){
+        ?>
+        <div class="container">
+          <div class="alert alert-danger" role="alert">
+            Error: no puedes borrar al administrador del sistema.
+          </div>
+        </div>
+        <?php
         }else{
-          $_SESSION['idModificar']=$id;
-          header("Location:http://localhost/Julio_XAMPP/Control_de_Laboratorio/PHP/modificacion_usuarios_query.php");
-          exit();
+                $sql="DELETE FROM usuarios WHERE ID=$id;";
         }
+
         if(!mysqli_query($con,$sql)) {
           die('Error: ' . mysqli_error($con));
         }
+        //Usamos redirect
+        header("Location:http://localhost/Julio_XAMPP/Control_de_Laboratorio/PHP/usuarios.php");
+        exit();
       mysqli_close($con);
       ?>

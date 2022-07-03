@@ -1,3 +1,6 @@
+<?php
+  $fallo=""
+?>
 <!doctype html>
 <html lang="es">
   <head>
@@ -15,6 +18,7 @@
     <link href="http://localhost/Julio_XAMPP/Control_de_Laboratorio/CSS/inicio.css" rel="stylesheet">
   </head>
   <body>
+<div class="container"> 
   <!-- Nav bar -->
   <nav class="navbar navbar-custom navbar-expand-md navbar-dark fixed-top">
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
@@ -43,7 +47,7 @@
         <!--Contraseña-->
         <div class="form-outline mb-4">
           <input type="password" name="contrasena" maxlength="12" placeholder="Máx. 12 caracteres" class="form-control" />
-          <label class="form-label">Contraseña</label>
+          <label class="form-label" >Contraseña</label>
         </div>
         <!-- Espacio entre contraseña y boton sign in -->
         <div class="row sm-4">
@@ -114,9 +118,13 @@
           header("Location:http://localhost/Julio_XAMPP/Control_de_Laboratorio/PHP/menu_inicio.php");
           exit();
         }else{
-          $fallo="La sesion no existe";
-          echo "<script type='text/javascript'>alert('$fallo');</script>";
+          ?><div class="container">
+          <div class="alert alert-danger" role="alert">
+          El usuario ingresado no existe
+          </div>
+      </div><?php
         }
       mysqli_close($con);
     ?>
+</div>
 </body>

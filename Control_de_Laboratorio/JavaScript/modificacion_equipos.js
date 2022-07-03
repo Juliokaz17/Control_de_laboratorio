@@ -1,5 +1,4 @@
 function validarFormulario() {
-
     var x1 = document.forms["formulario"]["nombre"].value;
     if (x1 == null || x1 == "") {
       alert("Debe llenar los campos vacios");

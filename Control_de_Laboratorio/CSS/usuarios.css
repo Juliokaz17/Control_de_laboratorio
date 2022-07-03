@@ -1,5 +1,5 @@
 .table{
-    margin-top: 100px;
+    margin-top: 50px; 
 }
 
 .display-4{
@@ -23,6 +23,17 @@ body {
 }
 
 .form_position{
-    margin-left: 460px;
+    margin-top: 50px;
+    margin-left: 465px;
+}
+
+.alert {
+    width:500px;
+    margin-left: 300px;    
+}
+
+.form_position-modificar{
+    margin-left: 300px;
+    margin-right: 300px;
 }
 

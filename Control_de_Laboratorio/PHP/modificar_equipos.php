@@ -26,7 +26,7 @@
             <a class="nav-link" href="http://localhost/Julio_XAMPP/Control_de_Laboratorio/PHP/menu_inicio.php">Menú de inicio<span class="sr-only">(current)</span></a>
           </li>
         <li class="nav-item active">
-            <a class="nav-link" href="http://localhost/Julio_XAMPP/Control_de_Laboratorio/PHP/usuarios.php">Tabla de usuarios<span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="http://localhost/Julio_XAMPP/Control_de_Laboratorio/PHP/eqs_laboratorio.php">Tabla de equipos<span class="sr-only">(current)</span></a>
           </li>
         </ul>
       </div>
@@ -34,7 +34,7 @@
     <div class="container">
         <div class="text-center">
             <img class="resize" src="http://localhost/Julio_XAMPP/Control_de_Laboratorio/Assets/logo.png">
-            <h1 class="display-4">Modificar un usuario</h1>
+            <h1 class="display-4">Modificar un equipo</h1>
         </div>   
     </div>
 
@@ -51,7 +51,7 @@
 
     <div class="container">
         <div class="alert alert-primary" role="alert">
-        Seleccionar el ID a modificar.
+        Seleccionar el equipo a modificar.
         </div>
     </div>
 
@@ -71,7 +71,7 @@
 
         // Guardo en la variable
         $id = mysqli_real_escape_string($con, $_POST['id']);
-        $checarID="SELECT * FROM usuarios WHERE id=$id;";
+        $checarID="SELECT * FROM equipos_laboratorio WHERE Clv_Equipo=$id;";
         $resultadoChecarID=mysqli_query($con,$checarID);
 
         //No ejecuto al hacer refresh
@@ -79,13 +79,13 @@
           ?>
         <div class="container">
           <div class="alert alert-danger" role="alert">
-            Error: el ID elegido no existe.
+            Error: el equipo elegido no existe.
           </div>
         </div>
         <?php
         }else{
           $_SESSION['idModificar']=$id;
-          header("Location:http://localhost/Julio_XAMPP/Control_de_Laboratorio/PHP/modificacion_usuarios_query.php");
+          header("Location:http://localhost/Julio_XAMPP/Control_de_Laboratorio/PHP/modificacion_equipos_query.php");
           exit();
         }
         if(!mysqli_query($con,$sql)) {

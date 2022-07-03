@@ -1,13 +1,4 @@
-function showDiv() {
-    document.getElementById('welcomeDiv').style.display = "block";
- }
-
- function showBotones() {
-    document.getElementById('boton_borrar').style.display = "block";
-    document.getElementById('boton_modificar').style.display = "block";
- }
-
- function validarFormularioUsuarios() {
+function validarFormularioUsuarios() {
     var y = document.forms["formulario"]["puesto"].value;
     if (y == null || y == "") {
       alert("Debe llenar los campos vacios");

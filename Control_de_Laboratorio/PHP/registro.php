@@ -59,12 +59,6 @@
           <input type="text" name="puesto" class="form-control" placeholder="Laboratorista, Administrador o Ejecutivo" maxlength="13"/>
           <label class="form-label">Puesto</label>
         </div>
-
-        <!--Derechos-->
-        <!-- <div class="form-outline mb-4">
-          <input type="text" name="derechos" class="form-control" placeholder="(Laboratorista o Administrador)"/>
-          <label class="form-label" for="form2Example1">Derechos</label>
-        </div> -->
       
         <!--Correo-->
         <div class="form-outline mb-4">

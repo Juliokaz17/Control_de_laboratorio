@@ -25,10 +25,4 @@ function validarFormulario() {
       alert("Debe llenar los campos vacios");
       return false;
     };
-
-    var u = document.forms["formulario"]["id"].value;
-    if(u == null || u == ""){
-      alert("Debe llenar los campos vacios");
-      return false;
-    };
 };

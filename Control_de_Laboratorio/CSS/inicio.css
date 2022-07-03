@@ -18,7 +18,7 @@ body {
     position: relative;
     top: 50px;
     width: 30%;
-    left:390px; 
+    left:380px; 
 
 }
 
@@ -35,3 +35,8 @@ body {
 .navbar-custom{
     background-color:#0A4DA9
 }
+
+.alert {
+
+     
+ }
