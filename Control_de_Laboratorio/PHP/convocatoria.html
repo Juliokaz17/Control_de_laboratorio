@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>Control de laboratorio</title>
+        <!-- Src de JavaScript -->
+        <script type="text/javascript" src="http://localhost/Julio_XAMPP/Control_de_Laboratorio/JavaScript/alta_clientes.js"></script>
+        <!-- Src de Bootstrap -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+        <link href="../CSS/eqs_laboratorio.css" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+        <style>
+            .container{
+                padding: 100px;
+                margin: auto ;
+            }
+            .container h3{
+                text-align: center;
+                font-weight: 700;
+            }
+            .content-option {
+                margin-top: 30px;
+                display: flex;
+            }
+            .comprar{
+                width:200px;
+                position: relative;
+                top: 15px;
+            }
+            .comprar h4{
+                font-size: 22px; font-weight: 700;
+            }
+
+            .comprar h5{
+                font-size: 20px;
+                padding-top: 33px;
+                font-weight: 700;
+            }
+            .empresa h4,.avance h4,.entrante h4,.consulta h4{
+                width: 200px;
+                background-color: #834495;
+                text-align: center;
+                color: white;
+                font-size: 15px;
+                padding-top: 20PX;
+                padding-bottom: 20PX;
+            }
+            .empresa,.avance ,.entrante,.consulta  {
+                text-align: center;
+            }
+            .empresa h5,.avance h5,.entrante h5,.consulta h5{
+                font-size: 15px;
+                font-weight: 400;
+                padding-top: 33px;
+            }
+
+            .plan{
+                background-color: #000000;
+                text-align: center;
+                color:white;
+                font-size: 12px;
+                padding: 10px 40px;
+                position: relative;
+                top: 30px;
+            }
+            .avance h4{
+                background-color:#F3A425;
+            }
+            .entrante h4{
+                background-color: rgb(35, 54, 199);
+            }
+            .consulta h4{
+                background-color: rgb(186, 21, 90);
+            }
+            .avance .a , .entrante .a,.empresa .a{
+                padding-top:0;
+            }
+            .consulta .check{
+            padding-top: 40px;
+            padding-bottom: 22px;
+            }
+            .comprar #info {
+                position: relative;
+                top: 10px;
+            }
+            .comprar #eject {
+                position: relative;
+                top: 5px;
+            }
+        </style>
+    </head>
+    <body>
+
+        <nav class="navbar navbar-custom navbar-expand-md navbar-dark fixed-top">
+            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                <a class="nav-link" href="menu_inicio.html">Menú de inicio<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="http://localhost/Julio_XAMPP/Control_de_Laboratorio/PHP/cerrar_sesion.php">Cerrar sesión<span class="sr-only">(current)</span></a>
+                </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="container">
+            <h3>PERFIL DE USUARIO</h3>
+            <div class="content-option">
+                <div class="comprar">
+                 <h4>PUESTO:</h4>
+                 <h5>GERENTE LABORATORIO:</h5>
+                 <h5>LABORATORIO:</h5>
+                 <h5 id="eject">EJECUTIVO:</h5>
+    
+    
+                </div>
+                <div class="empresa">
+                    <h4>ALTA</h4>
+                    <h5>✔</h5>
+                    <h5 class="h5">alta lotes Prod.</h5>
+                    <h5 class="a">+ analisis</h5>
+                    <h5>✘</h5>
+    
+                </div>
+                
+                <div class="avance">
+                    <h4>MODIFICA</h4>
+                    <h5>✔</h5>
+                    <h5 class="h5">alta lotes Prod.</h5>
+                    <h5 class="a">+ analisis</h5>
+                    <h5>✘</h5>
+    
+    
+    
+                </div>
+                
+    
+                <div class="entrante">
+                    <h4>BAJA</h4>
+                    <h5>✔</h5>
+                    <h5 class="h5">alta lotes Prod.</h5>
+                    <h5 class="a">+ analisis</h5>
+                    <h5>✘</h5>
+    
+                
+                </div>
+                <div class="consulta">
+                    <h4>CONSULTA</h4>
+                    <h5>✔</h5>
+                    <h5 class="check">✔</h5>
+                    <h5>✔</h5>
+                
+                </div>
+            </div>
+        </div>
+
+    </body>
+
+</html>

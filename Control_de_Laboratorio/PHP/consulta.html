@@ -1,0 +1,150 @@
+<?php
+    session_start();
+?>
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Control de laboratorio</title>
+    <!-- Src de JavaScript -->
+    <script type="text/javascript" src="http://localhost/Julio_XAMPP/Control_de_Laboratorio/JavaScript/alta_clientes.js"></script>
+    <!-- Src de Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="../CSS/eqs_laboratorio.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  </head>
+  <body>
+
+  <nav class="navbar navbar-custom navbar-expand-md navbar-dark fixed-top">
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+           <a class="nav-link" href="menu_inicio.html">Menú de inicio<span class="sr-only">(current)</span></a>
+        </li>
+
+        <li class="nav-item active">
+            <a class="nav-link" href="http://localhost/Julio_XAMPP/Control_de_Laboratorio/PHP/cerrar_sesion.php">Cerrar sesión<span class="sr-only">(current)</span></a>
+        </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container" style="margin-top:50px;">
+        <div class="text-center">
+            <h1 class="display-4">Consultas de Análisis</h1>
+        </div>
+    </div>
+
+    <div class="">
+        <form name="formulario" class="form_position" style="width:85%; left:100px;" role="form" method="post" >
+
+            <div class="row mt-4">
+                <div class="col-md-4 mb-4 ">
+                    <div class="form-outline">
+                        <label class="form-label">Tipo de harina</label>
+                        <input type="text" id="tipoHarina" placeholder="Ingrese tipo de harina"  class="form-control" />
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="form-outline">
+                        <label class="form-label">Inspección A</label>
+                        <input type="text" id="inspeccionA" placeholder="Ingrese inspección A"  class="form-control"/>
+                    </div>
+                </div>
+                <button type="button" onclick="buscar()" class="btn btn-primary btn-block mb-4 col-md-1" style="height:40px;top:30px; float:right;">Buscar</button>
+            </div>
+            <table id="myTable" class="table table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Tipo de Harina</th>
+                    <th scope="col">Inspeccion A</th>
+                    <th scope="col">Inspeccion B a Z</th>
+                    <th scope="col">Fuerza Panadera</th>
+                    <th scope="col">Tenacidad</th>
+                    <th scope="col">Extensibildad</th>
+                    <th scope="col">Radio Curva</th>
+                    <th scope="col">Elasticidad</th>
+                    <th scope="col">Humedad</th>
+                    <th scope="col">Absorcion</th>
+                    <th scope="col">Tolerancia Mec</th>
+                    <th scope="col">Responsable</th>
+                  </tr>
+                </thead>
+                <tbody id="tbody">
+                </tbody>
+              </table>
+            <!-- Espacio entre form y boton sign in -->
+            <div class="row sm-4">
+                <div class="col d-flex justify-content-center"></div>
+            </div>
+            <!-- Submit button -->
+        </form>
+    </div>
+    <script>
+
+        $('document').ready(function(){
+            buscar();
+        });
+
+        function buscar() {
+
+            var tipoHarina =  $("#tipoHarina").val();
+            var inspeccionA =  $("#inspeccionA").val();
+
+            $.ajax({
+                type: "GET",
+                url: "http://localhost:8081/analisis/findByTipoHarinaAndInspeccionA?tipoHarina="+tipoHarina+"&inspeccionA="+inspeccionA,
+                dataType: "json",
+                success: function(data)
+                {
+                    var table = document.getElementById("myTable");
+                    $("#myTable").find("tr:gt(0)").remove();
+                    var numero =1;
+                    for(let obj of data){
+
+                        var row = table.insertRow(numero);
+
+                        var cell1 = row.insertCell(0);
+                        var cell2 = row.insertCell(1);
+                        var cell3 = row.insertCell(2);
+                        var cell4 = row.insertCell(3);
+                        var cell5 = row.insertCell(4);
+                        var cell6 = row.insertCell(5);
+                        var cell7 = row.insertCell(6);
+                        var cell8 = row.insertCell(7);
+                        var cell9 = row.insertCell(8);
+                        var cell10 = row.insertCell(9);
+                        var cell11 = row.insertCell(10);
+                        var cell12 = row.insertCell(11);
+                        var cell13 = row.insertCell(12);
+
+                        cell1.innerHTML = obj.numLoteProd;
+                        cell2.innerHTML = obj.tipoHarina;
+                        cell3.innerHTML = obj.inspeccionA;
+                        cell4.innerHTML = obj.inspeccionBaZ;
+                        cell5.innerHTML = obj.resulFuerzaPanadera;
+                        cell6.innerHTML = obj.resulTenacidad;
+                        cell7.innerHTML = obj.resulExtensibildad;
+                        cell8.innerHTML = obj.resulRadioCurva;
+                        cell9.innerHTML = obj.resulElasticidad;
+                        cell10.innerHTML = obj.resulHumedad;
+                        cell11.innerHTML = obj.resulAbsorcion;
+                        cell12.innerHTML = obj.resulToleranciaMec;
+                        cell13.innerHTML = obj.responsableAnalisis;
+
+                        numero++;
+
+                    }
+                }
+            });
+
+        }
+    </script>
+</body>
